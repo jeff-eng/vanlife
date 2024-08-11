@@ -3,6 +3,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Home from "./Home";
 import About from "./About";
+import Vans from "./Vans";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/vans" element={<Vans />} />
         </Routes>
       </main>
       <Footer />
