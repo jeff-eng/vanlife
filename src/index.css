@@ -1,0 +1,152 @@
+/* CSS reset */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #252525;
+  color: #1a1a1a;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.header {
+  background-color: #fff7ed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 2.875em 1.625em;
+}
+
+.header__heading {
+  color: #000000;
+  font-size: 1.584rem;
+  letter-spacing: 0;
+  font-weight: 900;
+}
+
+.header__nav {
+  display: flex;
+  gap: 1.656em;
+}
+
+.header__link {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #4d4d4d;
+  transition: 0.1s ease-in-out;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: #252525;
+  color: #aaaaaa;
+  text-align: center;
+  align-content: center;
+  height: 74.75px;
+}
+
+.footer__text {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Home */
+.home {
+  background-color: #252525;
+  background-image: url("./assets/hero-image.png");
+  background-size: cover;
+  padding: 4.063em 1.688em;
+}
+
+.home__primary-heading,
+.home__sub-heading {
+  color: #ffffff;
+}
+
+.home__primary-heading {
+  font-size: 2.25rem;
+}
+
+.home__sub-heading {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5em;
+  margin-top: 1em;
+}
+
+.home__link {
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: #ff8c38;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+  padding-top: 1.125em;
+  padding-bottom: 1.125em;
+  margin-top: 3.5em;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #eb6300;
+  }
+}
+
+/* About */
+.about__hero-img {
+  width: 100%;
+}
+
+.about__content {
+  background-color: #fff7ed;
+  padding: 3.875em 1.688em 3.313em;
+}
+
+.about__heading {
+  font-size: 2rem;
+}
+
+.about__text {
+  display: grid;
+  gap: 1em;
+  margin-top: 2.5em;
+}
+
+.call-to-action__container {
+  background-color: #ffcc8d;
+  padding: 2.313em;
+  border-radius: 5px;
+  margin-top: 3em;
+}
+
+.call-to-action__text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.call-to-action__link {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #161616;
+  border-radius: 10px;
+  padding: 1.125em 1.375em;
+  margin-top: 1.813em;
+}
