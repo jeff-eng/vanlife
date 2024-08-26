@@ -8,8 +8,9 @@
 }
 
 body {
-  font-family: "Inter", sans-serif;
-  background-color: #252525;
+  font-family: 'Inter', sans-serif;
+  /* background-color: #252525; */
+  background-color: #fff7ed;
   color: #1a1a1a;
 }
 
@@ -49,6 +50,10 @@ body {
   }
 }
 
+.header__link--active {
+  text-decoration: underline;
+}
+
 /* Footer */
 .footer {
   background-color: #252525;
@@ -66,7 +71,7 @@ body {
 /* Home */
 .home {
   background-color: #252525;
-  background-image: url("./assets/hero-image.png");
+  background-image: url('./assets/hero-image.png');
   background-size: cover;
   padding: 4.063em 1.688em;
 }
@@ -149,4 +154,225 @@ body {
   border-radius: 10px;
   padding: 1.125em 1.375em;
   margin-top: 1.813em;
+}
+
+.vans {
+  background-color: #fff7ed;
+  padding: 2em 1.688em 5.188em;
+}
+
+.vans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-items: center;
+  gap: 2.125em;
+  margin-top: 4em;
+}
+
+.van-card {
+  border: 1px solid magenta;
+  display: grid;
+  /* gap: 1em; */
+}
+
+.van-card__img {
+  max-width: 100%;
+  border-radius: 5px;
+  aspect-ratio: 1 / 1;
+}
+
+.van-card__info-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid magenta;
+}
+
+.van-card__title,
+.van-card__price {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.van-card__price {
+  display: block;
+  text-align: right;
+  /* margin-top: 1em; */
+}
+
+.van-card__rate-day {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: right;
+  display: block;
+  border: 2px solid magenta;
+}
+
+.van-card__type {
+  text-transform: capitalize;
+  color: #ffead0;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  border: 1px solid purple;
+  width: max-content;
+}
+
+.van-card__price {
+  width: 3em;
+  border: 2px solid orange;
+  white-space: wrap;
+  overflow: visible;
+}
+
+/* Type stylings */
+.simple {
+  background-color: #e17654;
+}
+
+.rugged {
+  background-color: #115e59;
+}
+
+.luxury {
+  background-color: #161616;
+}
+
+/* Nav link styling */
+.nav-link__active {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #161616;
+}
+
+/* Host */
+.host-nav {
+  display: flex;
+  gap: 1em;
+}
+
+.host-nav a {
+  text-decoration: none;
+  color: #4d4d4d;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding: 0 1.5em 1.625em 1.5em;
+  border: 2px solid red;
+}
+
+.host-vans-section {
+  border: 2px solid magenta;
+  margin-top: 2em;
+}
+
+.host-vans-wrapper {
+  margin-top: 2em;
+  display: grid;
+  gap: 1em;
+}
+
+.host-van {
+  max-width: 500px;
+  display: grid;
+  grid-template-columns: 66px 1fr;
+  grid-template-rows: 0 1fr 1fr 0;
+  grid-template-areas:
+    '. .'
+    'img name'
+    'img rate'
+    '. .';
+  column-gap: 1em;
+  padding: 1.125em 1.5em;
+  background-color: #ffffff;
+  border-radius: 6px;
+  transition: 0.2s ease-in;
+
+  &:hover {
+    background-color: #ffead0;
+    box-shadow: #7878783b 0 10px 15px 5px;
+    transform: translateY(-3px);
+  }
+}
+
+.host-van-link {
+  text-decoration: none;
+}
+
+.host-van__img {
+  grid-area: img;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.host-van__heading {
+  grid-area: name;
+  align-self: end;
+  font-weight: 600;
+  color: #161616;
+  font-size: 1.25rem;
+}
+
+.host-van__rate {
+  grid-area: rate;
+  color: #4d4d4d;
+  align-self: center;
+}
+
+/* Host Van Detail */
+.host-van-detail {
+  background-color: #ffffff;
+  border: 1px dashed purple;
+  padding: 0 1.5em;
+}
+
+.host-van-detail__header {
+  display: grid;
+  grid-template-columns: 160px 2fr;
+  grid-template-rows: 0.75fr repeat(4, 1fr);
+  grid-template-areas:
+    'img . '
+    'img type'
+    'img name'
+    'img rate'
+    'img . ';
+  column-gap: 1em;
+  row-gap: 0.8em;
+  align-items: center;
+}
+
+.host-van-detail__img {
+  width: 158px;
+  grid-area: img;
+  border-radius: 5px;
+}
+
+.host-van-detail__label {
+  grid-area: type;
+  padding: 0.4em 1em;
+  background-color: #e17654;
+  color: #ffead0;
+  border-radius: 4.07px;
+  width: max-content;
+  text-transform: capitalize;
+}
+
+.host-van-detail__heading {
+  grid-area: name;
+  font-size: 1.625rem;
+}
+
+.host-van-detail__price {
+  grid-area: rate;
+}
+
+.host-van-detail__amt {
+  font-weight: 700;
+  font-size: 1.221rem;
 }

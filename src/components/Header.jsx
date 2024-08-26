@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import "../index.css";
+import { Link, NavLink } from 'react-router-dom';
+import '../index.css';
 
 export default function Header() {
   return (
@@ -8,13 +8,39 @@ export default function Header() {
         <h3 className="header__heading">#VANLIFE</h3>
       </Link>
       <nav className="header__nav">
-        <Link to="/about" className="link header__link">
+        <NavLink
+          to="/host"
+          className={({ isActive }) =>
+            isActive
+              ? 'link header__link header__link--active'
+              : 'link header__link'
+          }
+        >
+          Host
+        </NavLink>
+        <NavLink
+          to="/about"
+          className={({ isActive }) =>
+            isActive
+              ? 'link header__link header__link--active'
+              : 'link header__link'
+          }
+        >
           About
-        </Link>
-        <Link to="/vans" className="link header__link">
+        </NavLink>
+        <NavLink
+          to="/vans"
+          className={({ isActive }) =>
+            isActive
+              ? 'link header__link header__link--active'
+              : 'link header__link'
+          }
+        >
           Vans
-        </Link>
+        </NavLink>
       </nav>
     </header>
   );
 }
+
+// link header__link
